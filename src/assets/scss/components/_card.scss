@@ -1,0 +1,143 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem;
+
+  &__side {
+    height: 52rem;
+    width: 32.5rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    overflow: hidden;
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: $gradient-secondary;
+      }
+
+      &-2 {
+        background-image: $gradient-primary;
+      }
+
+      &-3 {
+        background-image: $gradient-tertiary;
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    &--1 {
+      background-image: $gradient-secondary, url(../img/nat-5.jpg);
+    }
+
+    &--2 {
+      background-image: $gradient-primary, url(../img/nat-6.jpg);
+    }
+
+    &--3 {
+      background-image: $gradient-tertiary, url(../img/nat-7.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    text-align: right;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+
+    &-span {
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+
+      &--1 {
+        background-image: $gradient-secondary-2;
+      }
+
+      &--2 {
+        background-image: $gradient-primary-2;
+      }
+
+      &--3 {
+        background-image: $gradient-tertiary-2;
+      }
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price {
+    &-box {
+      text-align: center;
+      color: $color-white;
+      margin-bottom: 8rem;
+    }
+
+    &-only {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    &-value {
+      font-size: 6rem;
+      font-weight: 100;
+    }
+  }
+}
