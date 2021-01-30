@@ -39,7 +39,6 @@ module.exports = {
                   data: `
                     @import "src/assets/scss/abstracts/variables";
                     @import "src/assets/scss/abstracts/mixins";
-                    @import "src/assets/scss/abstracts/functions";
                   `
                 }
               }
