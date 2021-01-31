@@ -43,6 +43,16 @@ export default {
       justify-items: center;
       justify-content: center;
       grid-column-gap: 20rem;
+
+      @include respond(tab-land) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 5rem;
+      }
+    }
+
+    .col {
+      display: flex;
+      justify-content: center;
     }
 
     &__logo {
@@ -65,10 +75,6 @@ export default {
       grid-column-gap: 1.5rem;
       grid-auto-flow: column;
       grid-auto-columns: max-content;
-    }
-
-    &__item {
-
     }
 
     &__link {
@@ -94,6 +100,13 @@ export default {
       border-top: 1px solid $color-grey-dark;
       padding-top: 2rem;
       width: 90%;
+
+      @include respond(tab-land) {
+        width: 75%;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+      }
     }
   }
 </style>

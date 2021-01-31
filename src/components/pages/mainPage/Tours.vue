@@ -112,9 +112,24 @@ export default {
 
     .row {
       display: grid;
-      grid-template-columns: repeat(3, 32.5rem);
+      grid-template-columns: repeat(3, 27.5%);
       grid-column-gap: 6rem;
       justify-content: center;
+
+        @include respond(tab-port) {
+          grid-gap: 5rem 0;
+          grid-template-columns: 50%;
+        }
+
+        @include respond(phone) {
+          grid-gap: 4rem 0;
+          grid-template-columns: 70%;
+        }
+
+        @include respond(big-desktop) {
+          grid-template-columns: repeat(3, 22%);
+          grid-column-gap: 9rem;
+        }
     }
   }
 </style>

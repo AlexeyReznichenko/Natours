@@ -57,19 +57,47 @@ export default {
     padding: 15rem 0;
     background-image: $gradient-primary;
 
+    @include respond(tab-port) {
+      padding: 10rem 0;
+    }
+
     .book {
       background-image: linear-gradient(105deg, 
-      rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%),
+      rgba($color-white, .9) 0%, rgba($color-white, .9) 41%, transparent 41%),
       url(../../../assets/img/nat-10.jpg);
-      background-size: 100%;
+      background-size: 127%;
       border-radius: 3px;
       box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
       margin: 0 auto;
       width: 80%;
 
+      @include respond(tab-land) {
+        background-image: linear-gradient(105deg, 
+        rgba($color-white, .9) 0%, rgba($color-white, .9) 40%, transparent 40%),
+        url(../../../assets/img/nat-10.jpg);
+        background-size: 140%;
+        width: 90%;
+      }
+
+      @include respond(tab-port) {
+        background-image: linear-gradient(105deg, 
+        rgba($color-white, .9) 0%, rgba($color-white, .9) 35%, transparent 35%),
+        url(../../../assets/img/nat-10.jpg);
+        background-size: 145%;
+      }
+
       &__form {
         width: 50%;
         padding: 5rem;
+
+        @include respond(tab-land) {
+          padding: 3rem;
+        }
+
+        @include respond(tab-port) {
+          width: 60%;
+          padding: 2rem;
+        }
       }
     }
   }

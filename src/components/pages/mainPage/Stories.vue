@@ -59,6 +59,10 @@ export default {
     position: relative;
     width: 100%;
 
+    @include respond(tab-port) {
+      padding: 10rem 0;
+    }
+
     .row {
       display: grid;
       grid-row-gap: 6rem;

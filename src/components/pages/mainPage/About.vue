@@ -45,10 +45,28 @@
     padding: 25rem 15rem;
     margin-top: -20vh;
 
+    @include respond(tab-land) {
+      padding-bottom: 60rem;
+      padding-top: 15rem;
+    }
+
+    @include respond(tab-port) {
+      padding-bottom: 55rem;
+    }
+
+    @include respond(phone) {
+      padding-bottom: 40rem;
+    }
+
     .row {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 4.5rem;
+
+      @include respond(tab-land) {
+        grid-gap: 10rem 0;
+        grid-template-columns: 1fr;
+      }
     }
   }
 </style>
