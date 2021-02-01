@@ -27,11 +27,19 @@ export default {
     position: relative;
     background-image: 
     linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
-     url(../../../assets/img/hero.jpg);
+     url(../../../assets/img/hero-small.jpg);
     background-size: cover;
     background-position: top;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+            (min-width: 125em) {
+      background-image: 
+      linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
+      url(../../../assets/img/hero.jpg);
+    }
 
     .logo {
       height: 3.5rem;
