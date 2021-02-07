@@ -40,12 +40,18 @@
           </div>
       </div>
     </div>
+
+    <section-slider></section-slider>
   </section>
 </template>
 
 <script>
-  export default {
+  import Slider from '../../Shared/Slider';
 
+  export default {
+    components: {
+        'section-slider': Slider,
+    }
   }
 </script>
 

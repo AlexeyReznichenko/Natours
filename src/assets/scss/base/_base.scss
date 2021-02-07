@@ -33,3 +33,15 @@ body {
     padding: 0;
   }
 }
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+button {
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}

@@ -1,0 +1,46 @@
+<template>
+  <div class="main-page">
+    <section-navigation></section-navigation>
+    <section-header></section-header>
+    <section-about></section-about>
+    <section-features></section-features>
+    <section-tours></section-tours>
+    <section-stories></section-stories>
+    <section-booking></section-booking>
+    <section-footer></section-footer>
+    <section-popup></section-popup>
+    <section-slider-big></section-slider-big>
+  </div>
+</template>
+
+<script>
+    import Header from './mainPage/Header';
+    import Navigation from './mainPage/Navigation';
+    import About from './mainPage/About';
+    import Features from './mainPage/Features';
+    import Tours from './mainPage/Tours';
+    import Popup from './mainPage/Popup';
+    import Stories from './mainPage/Stories';
+    import Booking from './mainPage/Booking';
+    import Footer from './mainPage/Footer';
+    import SliderBig from '../Shared/SliderBig';
+
+    export default {
+      components: {
+        'section-header': Header,
+        'section-navigation': Navigation,
+        'section-about': About,
+        'section-slider-big': SliderBig,
+        'section-features': Features,
+        'section-tours': Tours,
+        'section-popup': Popup,
+        'section-stories': Stories,
+        'section-booking': Booking,
+        'section-footer': Footer,
+      }
+    }
+</script>
+
+<style lang="scss">
+
+</style>

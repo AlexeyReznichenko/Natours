@@ -65,6 +65,7 @@ export default {
       z-index: 1500;
 
       opacity: 0;
+      visibility: hidden;
       width: 0;
       transition: all .8s cubic-bezier(.68, -.55, .265, 1.55);
     }
@@ -157,6 +158,7 @@ export default {
 
     &__checkbox:checked ~ &__nav {
       opacity: 1;
+      visibility: visible;
       width: 100%;
     }
   }
